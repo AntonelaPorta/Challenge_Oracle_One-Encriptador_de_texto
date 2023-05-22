@@ -9,22 +9,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="imagenes/Logo.png" alt="logo_alura">
-    </header>
     <main>
         <section id="encriptador">
+            <header>
+                <img src="imagenes/Logo.png" alt="logo_alura">
+            </header>
             <form action="">
-
+                <input type="text" name="mensaje" id="mensaje" placeholder="Ingrese el tecto aqui">
+                
+                <div class="botones">
+                    <p>Solo letras en minúsculas y sin acentos</p>
+                    <button id="encriptar">Encriptar</button>
+                    <button id="desencriptar">Desencriptar</button>
+                </div>
             </form>
-            <input type="text" name="mensaje" id="mensaje" placeholder="Ingrese el tecto aqui">
-            <p>Solo letras en minúsculas y sin acentos</p>
-            <div class="botones">
-                <button id="encriptar">Encriptar</button>
-                <button id="desencriptar">Desencriptar</button>
-            </div>
-            
         </section>
+        
         <section id="resultado">
             <img src="imagenes/Muñeco.png" alt="muñeco">
             <h2>Ningún mensaje fue encontrado</h2>
