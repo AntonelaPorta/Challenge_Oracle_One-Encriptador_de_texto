@@ -4,6 +4,7 @@ body {
     background-color: #F3F5FC;
     font-family: 'Inter', sans-serif;
     color: #343A40;
+
 }
 
 main {
@@ -16,12 +17,16 @@ section {
     margin: 40px;
 }
 
+#encriptador {
+    max-width: 65%;
+}
+
 header {
     margin-bottom: 40px;
 }
 
 form {
-    margin-left: 200px;
+    margin-left: 20%;
     height: calc(100% - 140px);
     
     position: relative;
@@ -34,7 +39,8 @@ textarea {
 
     font-family: 'Inter';
     font-size: 32px;
-    max-height: 300px;
+    max-height: 50%;
+    max-width: 90%;
 }
 
 textarea::placeholder {
@@ -45,13 +51,13 @@ textarea:focus {
     outline: none;
 }
 
-.botones {
+.container {
     position: absolute;
     bottom: 0;
     margin-top: auto;
 }
 
-.botones div {
+.aclaracion {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
@@ -60,19 +66,22 @@ textarea:focus {
     opacity: 0.8;
 }
 
-.botones p {
+.aclaracion p {
     margin-left: 8px;
-
 }
 
 .botones button {
+    display: inline-block;
     padding: 24px;
     gap: 8px;
-    width: 328px;
-    height: 67px;
     border: none;
     border-radius: 24px;
     font-size: 16px;
+    width: 328px;
+    height: 67px;
+
+    max-height: 15%;
+    max-width: 45%;
 }
 
 #encriptar {
@@ -93,7 +102,7 @@ textarea:focus {
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     text-align: center;
-    width: 25%;
+    max-width: 25%;
 
     position: absolute;
     top: 0;
@@ -108,12 +117,12 @@ textarea:focus {
 #resultado .imagen {
     overflow: hidden;
     margin: 32px;
-
-    border: 5px solid black;
 }
 
 .imagen img {
-    border: 5px solid green;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 #resultado h2 {
@@ -136,4 +145,66 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-  }
+}
+
+/* Responsive tablet */
+
+@media screen and (max-width:800px) {
+    main {
+        margin-bottom: 80px;
+    }
+    section {
+        height: auto;
+    }
+
+    #encriptador {
+        max-width: 100%;
+    }
+
+    form {
+        margin-left: 0px;
+        height: auto;
+        position: relative;
+    }
+
+    .botones {
+        text-align: center;
+    }
+
+    #resultado {
+        max-width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .imagen {
+        display: none;
+    }
+}
+
+/* Responsive celulares */
+
+@media screen and (max-width:500px) {
+    section {
+        margin: 16px;
+    }
+
+    #resultado {
+        margin: 24px;
+    }
+
+    .botones {
+        width: calc(100vw - 32px);
+    }
+
+    .botones button {
+        max-width: 100%;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 24px;
+    }
+
+    #encriptar {
+        margin-right: 0px;
+    }
+}
