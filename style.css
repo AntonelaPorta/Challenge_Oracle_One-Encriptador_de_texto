@@ -136,6 +136,10 @@ textarea:focus {
     font-size: 16px;
 }
 
+#copiar {
+    display: none;
+}
+
 footer {
     background-color: black;
     color: white;
