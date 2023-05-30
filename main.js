@@ -1,9 +1,12 @@
 // Referencias a los elementos del DOM
 const textoInput = document.getElementById('mensaje');
-const resultadoDiv = document.getElementById('resultado');
 const btnEncriptar = document.getElementById('encriptar');
 const btnDesencriptar = document.getElementById('desencriptar');
-const btnCopiar = document.getElementById("copiar")
+const btnCopiar = document.getElementById("copiar");
+
+const resultadoMensajeDiv = document.getElementById('mensaje-resultado');
+const conResultadoDiv = document.getElementById('con-resultado');
+const sinResultadoDiv = document.getElementById('sin-resultado');
 
 // Evento clic en los botones
 btnEncriptar.addEventListener('click', procesarTexto);
@@ -12,7 +15,7 @@ btnDesencriptar.addEventListener('click', procesarTexto);
 // Evento click al botón de Copiar
 
 btnCopiar.addEventListener('click', () => {
-  resultadoTextarea.select();
+    console.log('click')
   let mensajeCopiar = document.getElementById('mensaje-resultado').textContent
   console.log(mensajeCopiar)
   //document.execCommand('copy');
@@ -31,17 +34,10 @@ function procesarTexto(event) {
       resultado = desencriptarTexto(texto);
     }
 
-    //btnCopiar.style.display = "block";
+    conResultadoDiv.style.display = "block";
+    sinResultadoDiv.style.display = "none";
 
-    resultadoDiv.innerHTML = `
-      <div id="mensaje-resultado">
-          ${resultado}
-      </div>
-      <div class="boton-copiar">
-          <button id="copiar">Copiar</button>
-      </div>`;
-
-    
+    resultadoMensajeDiv.textContent = resultado
   }
 
 // Función para encriptar el texto

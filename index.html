@@ -34,15 +34,20 @@
         </section>
         
         <section id="resultado">
-            <div class="imagen">
-                <img src="imagenes/Muñeco.png" alt="muñeco">
+            <div id="sin-resultado">
+                <div class="imagen">
+                    <img src="imagenes/Muñeco.png" alt="muñeco">
+                </div>
+                <div class="texto">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
             </div>
-            <div class="texto">
-                <h2>Ningún mensaje fue encontrado</h2>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>
-            <div class="boton-copiar">
-                <button id="copiar">Copiar</button>
+            <div id="con-resultado" style="display: none;">
+                <div class="boton-copiar">
+                    <div id="mensaje-resultado"></div>
+                    <button id="copiar">Copiar</button>
+                </div>
             </div>
         </section>
     </main>
