@@ -13,12 +13,15 @@ btnEncriptar.addEventListener('click', procesarTexto);
 btnDesencriptar.addEventListener('click', procesarTexto);
 
 // Evento click al botón de Copiar
-
 btnCopiar.addEventListener('click', () => {
-    console.log('click')
   let mensajeCopiar = document.getElementById('mensaje-resultado').textContent
-  console.log(mensajeCopiar)
-  //document.execCommand('copy');
+
+  //API Clipboard
+  navigator.clipboard.writeText(mensajeCopiar).then(function() {
+    console.log("Contenido copiado al portapapeles: " + mensajeCopiar);
+  }, function() {
+    console.error("Error al copiar el contenido al portapapeles.");
+  });
 });
 
 //Funcion para procesar el mensaje del input Textarea
