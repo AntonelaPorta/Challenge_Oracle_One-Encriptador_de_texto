@@ -13,11 +13,12 @@ main {
 }
 
 section {
-    height: calc(100% - 80px);
-    margin: 40px;
+    height: calc(100% - 100px);
+    margin: 0px 40px 40px 40px;
 }
 
 #encriptador {
+    margin-top: 40px;
     max-width: 65%;
 }
 
@@ -90,11 +91,19 @@ textarea:focus {
     margin-right: 24px;
 }
 
+#encriptar:hover {
+    background-color: #07264b;
+}
+
 #desencriptar {
-    background: #D8DFE8;
+    background-color: #F3F5FC;
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
+}
+
+#desencriptar:hover {
+    background-color: #D8DFE8;;
 }
 
 #resultado {
@@ -102,6 +111,7 @@ textarea:focus {
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     text-align: center;
+    width: 25%;
     max-width: 25%;
 
     position: absolute;
@@ -134,6 +144,40 @@ textarea:focus {
 #resultado p {
     margin: 32px;
     font-size: 16px;
+}
+
+#con-resultado{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: left;
+
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+#mensaje-resultado {
+    margin: 32px;
+    font-size: 24px;
+}
+
+#copiar{
+    position: absolute;
+    bottom: 0;
+    margin-top: auto;
+    width: calc(100% - 64px);
+    height: 67px;
+    margin: 32px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    font-size: 16px;
+}
+
+#copiar:hover {
+    background-color: #D8DFE8;;
 }
 
 footer {
@@ -172,9 +216,14 @@ footer {
     }
 
     #resultado {
+        width: calc(100vw - 80px);
         max-width: 100%;
         position: relative;
         height: auto;
+    }
+
+    #copiar{
+        position: relative;
     }
 
     .imagen {
@@ -190,6 +239,7 @@ footer {
     }
 
     #resultado {
+        width: calc(100vw - 48px);
         margin: 24px;
     }
 
